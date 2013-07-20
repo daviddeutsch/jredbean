@@ -1,0 +1,23 @@
+{
+	"name": "daviddeutsch/jredbean",
+	"type": "library",
+	"description": "Providing RedBean support for Joomla applications",
+	"keywords": ["ORM","Object Relational Mapping"],
+	"homepage": "http://github.com/daviddeutsch",
+	"license": "BSD",
+	"authors": [
+		{
+			"name": "David Deutsch",
+			"email": "skore@valanx.org",
+			"homepage": "http://www.valanx.org",
+			"role": "Chief Botanist"
+		}
+	],
+	"require": {
+		"php": ">=5.2.0",
+		"gabordemooij/redbean": "dev-master"
+	},
+	"autoload": {
+		"psr-0": { "": "jRedBean/" }
+	}
+}
