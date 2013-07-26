@@ -1,4 +1,6 @@
 {
+	"vendor":"valanx",
+	"name":"jredbean"
 	"type": "joomla-library",
 	"version": "1.0"
 }
