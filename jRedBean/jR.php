@@ -2,8 +2,9 @@
 
 class jR
 {
-	static $context;
 	static $ready = false;
+	static $prefix = '';
+	static $context = '';
 
 	public static function create()
 	{
@@ -37,18 +38,18 @@ class jR
 
 		R::selectDatabase( 'joomla' );
 
+		self::$prefix = $app->getCfg('dbprefix');
+
 		return true;
 	}
 
 	public static function context( $context )
 	{
-		self::$context = $context;
+		self::$context = $context.'_';
 	}
 
 	public static function prefixed( $name )
 	{
-		$app = JFactory::getApplication();
-
-		return $app->getCfg('dbprefix').self::$context.'_'.$name;
+		return self::$prefix.self::$context.$name;
 	}
 }
