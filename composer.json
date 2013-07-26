@@ -5,7 +5,6 @@
 	"keywords": ["ORM","Object Relational Mapping"],
 	"homepage": "http://github.com/daviddeutsch",
 	"license": "BSD",
-	"version": "1.0",
 	"authors": [
 		{
 			"name": "David Deutsch",
