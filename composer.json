@@ -18,6 +18,8 @@
 		"gabordemooij/redbean": "dev-master"
 	},
 	"autoload": {
-		"psr-0": { "": "jRedBean/" }
+		"psr-0": {
+			"jRedBean": "/jRedBean"
+		}
 	}
 }
