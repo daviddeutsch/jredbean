@@ -37,8 +37,8 @@ class jR
 
 		R::addDatabase(
 			'joomla',
-			'mysql:host='.$app->getCfg('host').';'
-			.'dbname='.$app->getCfg('db'),
+			'mysql:host=' . $app->getCfg('host') . ';'
+			. 'dbname=' . $app->getCfg('db'),
 			$app->getCfg('user'),
 			$app->getCfg('password')
 		);
