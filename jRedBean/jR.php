@@ -8,7 +8,7 @@ class jR
 
 	public static function create()
 	{
-		if ( self::$ready ) {
+		if (self::$ready) {
 			return null;
 		}
 
@@ -36,7 +36,7 @@ class jR
 			$app->getCfg('password')
 		);
 
-		R::selectDatabase( 'joomla' );
+		R::selectDatabase('joomla');
 
 		self::$prefix = $app->getCfg('dbprefix');
 
