@@ -2,16 +2,22 @@
 
 class jR
 {
-	static $ready = false;
+	/**
+	 * Joomla database table prefix
+	 *
+	 * @var string
+	 */
 	static $prefix = '';
+
+	/**
+	 * Sub Prefix (commonly used for component name)
+	 *
+	 * @var string
+	 */
 	static $context = '';
 
 	public static function create()
 	{
-		if (self::$ready) {
-			return null;
-		}
-
 		$writerMapping = array(
 			'RedBean_QueryWriter_CUBRID' => 'jCubridQueryWriter',
 			'RedBean_QueryWriter_MySQL' => 'jMysqlQueryWriter',
