@@ -19,10 +19,10 @@ class jR
 	public static function create()
 	{
 		$writerMapping = array(
-			'RedBean_QueryWriter_CUBRID' => 'jCubridQueryWriter',
-			'RedBean_QueryWriter_MySQL' => 'jMysqlQueryWriter',
+			'RedBean_QueryWriter_CUBRID'     => 'jCubridQueryWriter',
+			'RedBean_QueryWriter_MySQL'      => 'jMysqlQueryWriter',
 			'RedBean_QueryWriter_PostgreSQL' => 'jPostgreSqlQueryWriter',
-			'RedBean_QueryWriter_SQLiteT' => 'jSQLiteTQueryWriter'
+			'RedBean_QueryWriter_SQLiteT'    => 'jSQLiteTQueryWriter'
 		);
 
 		$class = $writerMapping[get_class(R::$writer)];
