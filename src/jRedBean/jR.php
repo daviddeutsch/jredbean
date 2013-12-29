@@ -26,6 +26,7 @@ class jR
 		);
 
 		$class = $writerMapping[get_class(R::$writer)];
+
 		$writer = new $class(R::$adapter);
 
 		R::configureFacadeWithToolbox(
