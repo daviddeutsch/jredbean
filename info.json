@@ -1,6 +1,6 @@
 {
-	"vendor":"valanx",
-	"name":"jredbean",
-	"type": "library",
+	"vendor":  "valanx",
+	"name":    "jredbean",
+	"type":    "library",
 	"version": "1.0"
 }
