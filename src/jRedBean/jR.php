@@ -45,8 +45,6 @@ class jR
 		R::selectDatabase('joomla');
 
 		self::$prefix = $app->getCfg('dbprefix');
-
-		return true;
 	}
 
 	public static function context( $context )
