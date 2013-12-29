@@ -19,21 +19,15 @@ class jR
 	public static function create()
 	{
 		$writerMapping = array(
-			'RedBean_QueryWriter_CUBRID'     => 'jCubridQueryWriter',
-			'RedBean_QueryWriter_MySQL'      => 'jMysqlQueryWriter',
-			'RedBean_QueryWriter_PostgreSQL' => 'jPostgreSqlQueryWriter',
-			'RedBean_QueryWriter_SQLiteT'    => 'jSQLiteTQueryWriter'
-		);
-
-		$class = $writerMapping[get_class(R::$writer)];
-
-		$writer = new $class(R::$adapter);
-
-		R::configureFacadeWithToolbox(
-			new RedBean_ToolBox(R::$redbean, R::$adapter, $writer)
+			'mysql'      => 'jMysqlQueryWriter',
+			'mysqli'     => 'jMysqlQueryWriter',
+			'postgresql' => 'jPostgreSqlQueryWriter',
+			'sqlite'     => 'jSQLiteTQueryWriter'
 		);
 
 		$app = JFactory::getApplication();
+
+		$class = $writerMapping[$app->getCfg('dbtype')];
 
 		R::addDatabase(
 			'joomla',
@@ -44,6 +38,12 @@ class jR
 		);
 
 		R::selectDatabase('joomla');
+
+		$jWriter = new $class(R::$adapter);
+
+		R::configureFacadeWithToolbox(
+			new RedBean_ToolBox(R::$redbean, R::$adapter, $jWriter)
+		);
 
 		self::$prefix = $app->getCfg('dbprefix');
 	}

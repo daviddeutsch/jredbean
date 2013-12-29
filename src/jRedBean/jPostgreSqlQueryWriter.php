@@ -1,6 +1,6 @@
 <?php
 
-class jPostgreSqlQueryWriter
+class jPostgreSqlQueryWriter extends RedBean_QueryWriter_PostgreSQL
 {
 	public function safeTable( $name, $noQuotes=false )
 	{
