@@ -2,8 +2,8 @@
 	"name": "daviddeutsch/jredbean",
 	"type": "library",
 	"description": "Providing RedBean support for Joomla applications",
-	"keywords": ["ORM","Object Relational Mapping"],
-	"homepage": "http://github.com/daviddeutsch",
+	"keywords": ["joomla","ORM","Object Relational Mapping"],
+	"homepage": "http://github.com/daviddeutsch/jredbean",
 	"license": "BSD",
 	"authors": [
 		{
